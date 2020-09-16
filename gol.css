@@ -1,0 +1,17 @@
+#world {
+    padding-bottom: 10px;
+}
+#worldTbl {
+    background-color: whitesmoke;
+}
+td {
+    border: 1px solid darkgray;
+    width: 10px;
+    height: 10px;
+}
+td.alive {
+    background-color: rgb(67, 103, 221);
+}
+td.dead {
+    background-color: rgb(252, 157, 122);
+}
