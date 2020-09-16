@@ -38,6 +38,75 @@ function cellTouch () {
 
 window.onload = () => createWorld();
 
+///////////my attempt without the tut//////////
+//////////////////////////////////////////////
+
+// when a button is pressed run a render() function that runs the laws of nature
+// create a button to pause render()
+//create a button to reset render()
+
+
+// Process world through it's laws of nature.  takes a set
+function lawsOfNature (theJudged) {
+    
+    for (let i = 0; i < theJudged.length; i++) {
+        let fate = neighborStatus(theJudged[i]);
+
+        if (fate < 2) {
+            theJudged[i].setAttribute('class', 'dead');
+        }
+        else if (fate == 2 || fate == 3) {
+            theJudged[i].setAttribute('class', 'alive');
+            
+        }
+        else {
+            theJudged[i].setAttribute('class', 'dead');
+        } 
+    }
+    
+    
+}
+
+//TODO HTML Create Start Button with id = #start
+//TODO HTML Create Stop button id = #stop
+
+//function to start game of life
+///do while loop that is true if the start button .class =true.  Runs laws of nature in the loop
+// TODO
+
+//Start button function
+/// on 'click' then runs lawsOfNature()
+//sets #start class to .true
+// TODO
+
+//off button function 
+///click #stop
+///set #start button .class = true
+// TODO
+
+// Turns current world into a list of coordinate id's
+function getWorldArray (){
+
+    for (let i = 0; i < rows; i++){
+        for (let j = 0; j < clms; j++){
+            let cellName = i + '_' + j
+            let cell = document.getElementById(cellName)
+
+            cells.append(cell)
+
+            return cells         
+        }
+    }
+}
+
+//returns an int representing the sum of a cell's alive neighbors
+neighborStatus (a) {
+
+    //do some stuff here to find the sum of alive neighbors
+    return sum of alive neighbors as an int;
+}
+
+
 
 
 
