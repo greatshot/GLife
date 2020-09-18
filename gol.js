@@ -1,8 +1,8 @@
 const rows = 40;
-const cols = 40;
+const cols = 120;
 let started=false;// Set to true when use clicks start
 let timer;//To control evolutions
-let evolutionSpeed=1000;// One second between generations
+let evolutionSpeed=100;// One 10th of a second between generations
 // Need 2D arrays. These are 1D
 let currGen =[rows];
 let nextGen =[rows];
